@@ -12,27 +12,48 @@
       background: linear-gradient(135deg, #ffe0f0, #fffdfd);
       color: #444;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     h1 {
-      margin-top: 60px;
-      font-size: 3em;
+      margin-top: 20px;
+      font-size: 2.5em;
       color: #d63384;
     }
 
     p {
-      font-size: 1.3em;
+      font-size: 1.2em;
       max-width: 700px;
       margin: 20px auto;
       line-height: 1.6em;
     }
 
+    /* Photo Gallery */
+    .gallery {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      width: 100vw;
+      height: 80vh;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      scroll-snap-align: center;
+    }
+
+    /* Floating Flowers */
     .flower {
       position: absolute;
       font-size: 24px;
       animation: float 12s linear infinite;
       opacity: 0.7;
+      pointer-events: none;
     }
 
     @keyframes float {
@@ -49,6 +70,17 @@
     Streetwise yet graceful, outgoing yet thoughtful,<br>
     Orita reminds everyone that life is best lived with laughter and kindness.
   </p>
+
+  <!-- Horizontal Scroll Gallery -->
+  <div class="gallery">
+    <img src="orita0.jpg" alt="Orita 0">
+    <img src="orita1.jpg" alt="Orita 1">
+    <img src="orita2.jpg" alt="Orita 2">
+    <img src="orita3.jpg" alt="Orita 3">
+    <img src="orita4.jpg" alt="Orita 4">
+    <img src="orita5.jpg" alt="Orita 5">
+  
+  </div>
 
   <!-- Floating Flowers -->
   <div class="flower" style="left:10%; animation-delay: 0s;">🌸</div>
